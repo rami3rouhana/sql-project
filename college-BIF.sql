@@ -1,6 +1,5 @@
 -- Find all courses taken by BIF majors
 SELECT courses.name FROM courses 
-SELECT courses.name FROM courses 
 WHERE courses.crn IN (
         SELECT courses_crn
         FROM enrolled 
