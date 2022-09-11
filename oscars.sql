@@ -1,10 +1,10 @@
-SELECT name, earnings_rank FROM movie
+SELECT name, earnings_rank FROM movies
 WHERE earnings_rank = (
     SELECT MIN(earnings_rank)
-    FROM movie
+    FROM movies
 )
 AND id IN (
-	SELECT movie_id
-	FROM oscar
+	SELECT movies_id
+	FROM oscars
 	where type="best-picture"
 )
